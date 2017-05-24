@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table>
+            <tr>
+                {% for description in column_name %}
+                <th>{{ description }}</th>
+                {% endfor %}
+            </tr>
+            {% for element in answer_list %}
+            <tr>
+                {% for column in element %}
+                <td>{{ column }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
