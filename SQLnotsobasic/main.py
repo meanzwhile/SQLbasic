@@ -98,5 +98,15 @@ def applicants_and_mentors():
     return render_template("answer.html", column_name=column_name, answer_list=answer_list)
 
 
+@app.route("/add_data", methods=["GET", "POST"])
+def add_data():
+    if request.method == "GET":
+        x = request.form[value]
+        print(x)
+        return render_template("add_data.html")
+    if request.method == "POST":
+        return render_template("index.html")
+
+
 if __name__ == '__main__':
     app.run(debug=True)
