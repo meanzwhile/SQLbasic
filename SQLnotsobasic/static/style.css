@@ -32,5 +32,19 @@ td {
     color: gold;
 }
 p {
-    color: gold
+    color: gold;
+}
+select {
+    border-color: gold;
+    background-color: black;
+    color: gold;
+}
+.submit-button {
+    background-color: black;
+    border: 2px solid gold;
+    display: inline-block;
+    color: gold;
+}
+.submit-button:hover {
+    background-color: green;
 }

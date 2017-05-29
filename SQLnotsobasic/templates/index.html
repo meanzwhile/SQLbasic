@@ -15,13 +15,13 @@
             <li><a href="/applicants">Applicants page</a></li>
             <li><a href="/applicants-and-mentors">Applicants and mentors page</a></li>
         </ul>
-        <form method="POST" action="add_data">
-            <select>
-                <option value="applicants">applicants</option>
-                <option value="mentors">mentors</option>
-                <option value="school">school</option>
+        <form action="{{ url_for('show_full_table') }}" method="POST">
+            <select name="name">
+                <option>applicants</option>
+                <option>mentors</option>
+                <option>schools</option>
             </select>
-            <button type="submit" name="create" value="Create">Submit</button>
+            <button class="submit-button" type="submit" value="Create">Look full table</button>
         </form>
     </body>
 </html>

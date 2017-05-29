@@ -98,14 +98,13 @@ def applicants_and_mentors():
     return render_template("answer.html", column_name=column_name, answer_list=answer_list)
 
 
-@app.route("/add_data", methods=["GET", "POST"])
-def add_data():
-    if request.method == "GET":
-        x = request.form[value]
-        print(x)
-        return render_template("add_data.html")
-    if request.method == "POST":
-        return render_template("index.html")
+@app.route("/show-full-table", methods=["POST"])
+def show_full_table():
+    print("THIS FUCKING SHIT IS CALLED\n\n\n\n\n")
+    table = request.form["name"]
+    column_name = [col_names[0] for col_names in get_description("SELECT * FROM {};".format(table))]
+    answer_list = database_handler("SELECT * FROM {};".format(table))
+    return render_template("answer.html", column_name=column_name, answer_list=answer_list)
 
 
 if __name__ == '__main__':
